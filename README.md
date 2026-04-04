@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/icon.ico" width="80" alt="Piper TTS Trainer Icon"/>
+<img src="assets/thumbnail.png" width="80" alt="Piper TTS Trainer Icon"/>
 
 # 🎙️ Piper TTS Trainer
 
