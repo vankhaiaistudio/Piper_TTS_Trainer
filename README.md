@@ -7,7 +7,7 @@
 **Giao diện đồ họa huấn luyện, xuất và chạy thử giọng nói Piper TTS**
 Tối ưu cho tiếng Việt — Phát triển bởi **Văn Khải A.I Studio**
 
-[![Version](https://img.shields.io/github/v/release/vankhaiaistudio/Piper_TTS_Trainer?label=version&color=2563eb)](https://github.com/vankhaiaistudio/Piper_TTS_Trainer/releases/latest)
+[![Version](https://img.shields.io/badge/version-3.0-2563eb)](https://github.com/vankhaiaistudio/Piper_TTS_Trainer/releases/latest)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-0078d4?logo=windows)](https://github.com/vankhaiaistudio/Piper_TTS_Trainer/releases/latest)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
