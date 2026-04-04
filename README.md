@@ -1,184 +1,217 @@
-# 🎙️ Piper TTS Trainer v3.0
+<div align="center">
 
-> **Giao diện đồ họa (GUI) giúp huấn luyện, xuất và chạy thử giọng nói Piper TTS — dành riêng cho tiếng Việt.**
-> Phát triển bởi **Văn Khải A.I Studio**
+<img src="assets/icon.ico" width="80" alt="Piper TTS Trainer Icon"/>
 
----
+# 🎙️ Piper TTS Trainer
 
-## ✨ Tính năng nổi bật
+**Giao diện đồ họa huấn luyện, xuất và chạy thử giọng nói Piper TTS**
+Tối ưu cho tiếng Việt — Phát triển bởi **Văn Khải A.I Studio**
 
-| Tính năng | Mô tả |
-|---|---|
-| 🛠️ Setup tự động | Tạo venv, cài PyTorch, clone piper-train chỉ với 1 nút |
-| 📦 Quản lý Dataset | Chọn file CSV, thư mục audio, kiểm tra dữ liệu |
-| 🚀 Huấn luyện | Giao diện train trực quan, xem log real-time |
-| 📤 Export ONNX | Xuất model sang định dạng `.onnx` để dùng với Piper |
-| 🔊 Chạy thử giọng | Tổng hợp và phát audio ngay trong app |
-| 🇻🇳 Xử lý tiếng Việt | Module `vn_text_processor` chuyển số, ngày tháng, tiền tệ → chữ |
-| 💾 Lưu cấu hình | Tự động lưu/nạp các thiết lập khi đóng/mở app |
+[![Version](https://img.shields.io/badge/dynamic/raw?url=https://raw.githubusercontent.com/vankhaiaistudio/Piper_TTS_Trainer/main/version.txt&label=version&color=2563eb)](https://github.com/vankhaiaistudio/Piper_TTS_Trainer/releases/latest)
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-0078d4?logo=windows)](https://github.com/vankhaiaistudio/Piper_TTS_Trainer/releases/latest)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ---
 
-## 📋 Yêu cầu hệ thống
+### ⬇️ [Tải về bản mới nhất](https://github.com/vankhaiaistudio/Piper_TTS_Trainer/releases/latest)
 
-- **OS**: Windows 10/11 (64-bit)
-- **Python**: 3.10 – 3.12 (cài sẵn trong PATH)
-- **RAM**: tối thiểu 8 GB (khuyến nghị 16 GB+)
-- **GPU**: NVIDIA CUDA (tuỳ chọn, tăng tốc độ train)
-- **Dung lượng**: ~5 GB cho môi trường venv + model
+</div>
 
 ---
 
-## 🚀 Cài đặt nhanh
+## ✨ Tính năng
 
-### Cách 1 — Dùng file Installer (khuyến nghị)
+| | Tính năng | Mô tả |
+|---|---|---|
+| 🛠️ | **Setup tự động** | Tạo venv, cài PyTorch, clone piper-train chỉ với 1 nút bấm |
+| 📦 | **Quản lý Dataset** | Chọn file CSV + thư mục audio, kiểm tra dữ liệu trực quan |
+| 🚀 | **Huấn luyện** | Giao diện train với log real-time, hỗ trợ checkpoint |
+| 📤 | **Export ONNX** | Xuất model sang `.onnx` để dùng trực tiếp với Piper |
+| 🔊 | **Chạy thử giọng** | Tổng hợp và phát audio ngay trong app |
+| 🇻🇳 | **Xử lý tiếng Việt** | Tự động chuyển số, ngày tháng, tiền tệ, đơn vị → chữ |
+| 🔔 | **Tự cập nhật** | App tự kiểm tra và thông báo khi có phiên bản mới |
+| 💾 | **Lưu cấu hình** | Tự động lưu/nạp thiết lập khi đóng/mở app |
 
-1. Tải file `PiperTTSTrainer_v3.0_Setup.exe` từ tab [Releases](../../releases)
-2. Chạy installer và làm theo hướng dẫn
-3. Khởi chạy **Piper TTS Trainer** từ Desktop hoặc Start Menu
+---
 
-### Cách 2 — Chạy từ mã nguồn
+## 💻 Yêu cầu hệ thống
 
-```bash
-# 1. Clone repo
-git clone https://github.com/your-username/piper-tts-trainer.git
-cd piper-tts-trainer
+| | Tối thiểu | Khuyến nghị |
+|---|---|---|
+| **OS** | Windows 10 64-bit | Windows 11 64-bit |
+| **RAM** | 8 GB | 16 GB trở lên |
+| **GPU** | Không bắt buộc | NVIDIA CUDA (tăng tốc train) |
+| **Python** | 3.10 – 3.12 | 3.11 |
+| **Dung lượng** | 500 MB (app) | ~5 GB (app + venv + model) |
 
-# 2. Cài thư viện (chỉ cần tkinter — có sẵn trong Python)
-python piper_train_app.py
+> ⚠️ **Python phải được cài sẵn và có trong PATH** trước khi chạy app.
+> Tải Python tại: [python.org/downloads](https://www.python.org/downloads/)
+
+---
+
+## 📥 Cài đặt
+
+### Bước 1 — Tải file installer
+
+Vào trang **[Releases](https://github.com/vankhaiaistudio/Piper_TTS_Trainer/releases/latest)** và tải file:
+
+```
+PiperTTSTrainer_vX.X_Setup.exe
 ```
 
-> **Lưu ý**: Khi chạy lần đầu, app sẽ tự tạo virtual environment (`.venv`) và cài các gói cần thiết. Cần kết nối Internet.
+### Bước 2 — Chạy installer
+
+Double-click vào file `.exe` vừa tải.
+
+> Nếu Windows hiện cảnh báo **"Windows protected your PC"** → Nhấn **More info** → **Run anyway**
+> (App chưa có chữ ký số, hoàn toàn an toàn)
+
+### Bước 3 — Làm theo wizard
+
+| Bước | Mô tả |
+|---|---|
+| Chọn thư mục cài | Mặc định: `C:\Program Files\PiperTTSTrainer` |
+| Tạo shortcut Desktop | Tuỳ chọn (mặc định: không tích) |
+| Nhấn **Install** | Chờ khoảng 10–30 giây |
+| Nhấn **Finish** | Có thể tick "Khởi chạy ngay" |
+
+### Bước 4 — Khởi chạy lần đầu
+
+Mở **Piper TTS Trainer** từ Desktop hoặc Start Menu.
+
+Lần đầu chạy, app sẽ tự tải và cài các thành phần cần thiết (cần Internet). Quá trình này chỉ xảy ra **một lần duy nhất**.
 
 ---
 
 ## 📖 Hướng dẫn sử dụng
 
-### Bước 1 — Setup môi trường
+### Tab ⚙️ Setup — Chuẩn bị môi trường
 
-Vào tab **⚙️ Setup**, thực hiện lần lượt từ Bước 01 đến Bước 10:
+Thực hiện lần lượt từ **Bước 01 → Bước 10**:
 
-- Tạo venv Python
-- Cài PyTorch + piper-train
-- Tải pretrained checkpoint từ HuggingFace
+1. Tạo virtual environment Python
+2. Cài PyTorch (CPU hoặc CUDA)
+3. Cài piper-train và các thư viện
+4. Tải pretrained checkpoint từ HuggingFace
+5. Kiểm tra môi trường sẵn sàng
 
-### Bước 2 — Chuẩn bị Dataset
+> 💡 Chỉ cần làm Setup **một lần**. Lần sau mở app có thể dùng ngay.
+
+---
+
+### Tab 📦 Dataset — Chuẩn bị dữ liệu
+
+Cấu trúc thư mục cần có:
 
 ```
 project_dir/
-├── wavs/               ← Thư mục chứa file audio (.wav)
+├── wavs/
 │   ├── audio_001.wav
 │   ├── audio_002.wav
 │   └── ...
-└── metadata.csv        ← File CSV: audio_id|transcript
+└── metadata.csv
 ```
 
-Định dạng CSV:
+Định dạng file `metadata.csv`:
+
 ```
-audio_001|Xin chào, đây là giọng nói tổng hợp.
-audio_002|Piper TTS hỗ trợ tiếng Việt rất tốt.
+audio_001|Xin chào, đây là giọng nói tổng hợp tiếng Việt.
+audio_002|Piper TTS hỗ trợ huấn luyện giọng nói tùy chỉnh.
 ```
 
-### Bước 3 — Huấn luyện
-
-Vào tab **🚀 Train**, điền thông tin:
-- **Voice Name**: Tên giọng nói (vd: `my_voice_vi`)
-- **Dataset CSV**: Đường dẫn file metadata
-- **Audio Dir**: Thư mục chứa file wav
-- **Checkpoint**: File `.ckpt` pretrained
-
-Nhấn **▶ Bắt đầu Train** và theo dõi log.
-
-### Bước 4 — Export & Chạy thử
-
-1. Tab **📤 Export**: Chọn checkpoint tốt nhất → Export sang `.onnx`
-2. Tab **🔊 Chạy Thử**: Nhập văn bản → Tổng hợp và nghe kết quả
+> File audio phải là `.wav`, **mono**, sample rate **22050 Hz** hoặc **16000 Hz**.
 
 ---
 
-## 🇻🇳 Module xử lý tiếng Việt (`vn_text_processor.py`)
+### Tab 🚀 Train — Huấn luyện
 
-Module này tự động chuẩn hóa văn bản trước khi đưa vào Piper:
+Điền các thông tin:
 
-```python
-from vn_text_processor import process
+| Trường | Ví dụ | Mô tả |
+|---|---|---|
+| Voice Name | `my_voice_vi` | Tên giọng nói |
+| Dataset CSV | `D:\data\metadata.csv` | File danh sách audio |
+| Audio Dir | `D:\data\wavs` | Thư mục chứa file wav |
+| Checkpoint | *(chọn pretrained)* | File `.ckpt` khởi điểm |
+| Batch Size | `6` | Giảm nếu thiếu RAM/VRAM |
+| Max Epochs | `4000` | Số vòng huấn luyện tối đa |
 
-print(process("Giá là 250.000đ, giảm 15%."))
-# → "Giá là hai trăm năm mươi nghìn đồng, giảm mười lăm phần trăm."
-
-print(process("Cuộc họp lúc 8h30 ngày 15/3/2025."))
-# → "Cuộc họp lúc tám giờ ba mươi phút ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi lăm."
-```
-
-**Hỗ trợ:**
-- Số → chữ (`250` → `hai trăm năm mươi`)
-- Ngày tháng (`15/3/2025` → `ngày mười lăm tháng ba...`)
-- Giờ (`8h30`, `08:30`)
-- Tiền tệ (`250.000đ`, `$100`)
-- Phần trăm (`12%`, `3,5%`)
-- Đơn vị đo (`5km`, `37°C`, `90km/h`)
-- Số điện thoại (đọc từng số)
-- Phiên âm tiếng Anh (`love` → `lớp`)
-- Dọn emoji, URL, email
+Nhấn **▶ Bắt đầu Train** và theo dõi log. Checkpoint được lưu tự động mỗi vài epoch.
 
 ---
 
-## 🏗️ Build từ mã nguồn
+### Tab 📤 Export — Xuất model
 
-### Yêu cầu build
-- Python 3.10+
-- PyInstaller: `pip install pyinstaller`
-- Inno Setup 6+: [jrsoftware.org](https://jrsoftware.org/isinfo.php)
-
-### Build EXE
-
-```bash
-pyinstaller --noconfirm --onedir --windowed --name PiperTrainer ^
-    --add-data "vn_text_processor.py;." ^
-    piper_train_app.py
-```
-
-### Đóng gói Installer
-
-Mở `PiperTrainer_Setup.iss` bằng **Inno Setup Compiler** → **Build → Compile**
-
-File installer sẽ xuất hiện tại `Output\PiperTTSTrainer_v3.0_Setup.exe`
+1. Chọn file `.ckpt` tốt nhất từ danh sách
+2. Nhấn **Export ONNX**
+3. App tự tạo 2 file: `my_voice.onnx` và `my_voice.onnx.json`
+4. Chuyển sang tab **Chạy Thử** để kiểm tra kết quả
 
 ---
 
-## 📁 Cấu trúc thư mục
+### Tab 🔊 Chạy Thử — Kiểm tra giọng nói
 
-```
-piper-tts-trainer/
-├── piper_train_app.py          ← App chính (GUI Tkinter)
-├── vn_text_processor.py        ← Module xử lý văn bản tiếng Việt
-├── PiperTrainer_Setup.iss      ← Script Inno Setup để build installer
-├── README.md
-└── dist/                       ← Thư mục output của PyInstaller
-    └── PiperTrainer/
-        └── PiperTrainer.exe
-```
+1. Chọn file `.onnx` và `.onnx.json` vừa export
+2. Nhập văn bản tiếng Việt vào ô input
+3. Bật **Xử lý tiếng Việt** để tự động chuẩn hóa văn bản
+4. Nhấn **Tổng hợp** → App phát audio và lưu file `test_output.wav`
 
 ---
 
-## 🤝 Đóng góp
+## 🇻🇳 Xử lý văn bản tiếng Việt
 
-Pull requests và issues luôn được chào đón!
+App tự động chuẩn hóa văn bản trước khi tổng hợp:
 
-1. Fork repo này
-2. Tạo branch mới: `git checkout -b feat/ten-tinh-nang`
-3. Commit thay đổi: `git commit -m "feat: thêm tính năng X"`
-4. Push lên branch: `git push origin feat/ten-tinh-nang`
-5. Tạo Pull Request
+| Input | Output |
+|---|---|
+| `250.000đ` | `hai trăm năm mươi nghìn đồng` |
+| `15/3/2025` | `ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi lăm` |
+| `8h30` | `tám giờ ba mươi phút` |
+| `12%` | `mười hai phần trăm` |
+| `90km/h` | `chín mươi ki-lô-mét trên giờ` |
+| `0912345678` | `không chín một hai ba bốn năm sáu bảy tám` |
+
+---
+
+## 🔔 Cập nhật
+
+App tự động kiểm tra phiên bản mới khi khởi động. Khi có bản cập nhật, một hộp thoại sẽ hiện ra và hỏi bạn có muốn mở trang tải về không.
+
+Bạn cũng có thể kiểm tra thủ công tại: [Releases](https://github.com/vankhaiaistudio/Piper_TTS_Trainer/releases)
+
+---
+
+## ❓ Câu hỏi thường gặp
+
+**Q: App báo lỗi "Python not found"?**
+> Cài Python 3.10–3.12 từ [python.org](https://www.python.org/downloads/) và đảm bảo tick **"Add Python to PATH"** khi cài.
+
+**Q: Train rất chậm?**
+> Cài PyTorch với CUDA nếu bạn có GPU NVIDIA. Chọn đúng phiên bản CUDA trong tab Setup.
+
+**Q: Checkpoint bị lỗi khi load?**
+> App đã tích hợp sẵn patch `PosixPath → WindowsPath`. Nếu vẫn lỗi, thử dùng checkpoint từ đúng phiên bản piper-train.
+
+**Q: File wav không được nhận dạng?**
+> Kiểm tra file wav phải là **mono**, không phải stereo. Dùng Audacity để convert nếu cần.
+
+---
+
+## 📬 Liên hệ & Hỗ trợ
+
+- 🐛 **Báo lỗi**: [GitHub Issues](https://github.com/vankhaiaistudio/Piper_TTS_Trainer/issues)
+- 💬 **Thảo luận**: [GitHub Discussions](https://github.com/vankhaiaistudio/Piper_TTS_Trainer/discussions)
 
 ---
 
 ## 📄 Giấy phép
 
-Dự án này được phân phối theo giấy phép **MIT**. Xem file [LICENSE](LICENSE) để biết thêm chi tiết.
+Phân phối theo giấy phép **MIT**. Xem file [LICENSE](LICENSE) để biết thêm chi tiết.
+
+> ⚠️ Source code của dự án này **không được công khai**. Vui lòng không decompile, reverse engineer hoặc phân phối lại file EXE.
 
 ---
 
 <div align="center">
-  <b>Phát triển với ❤️ bởi Văn Khải A.I Studio</b>
+Phát triển với ❤️ bởi <b>Văn Khải A.I Studio</b>
 </div>
