@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/banner.png" width="100%" alt="Piper TTS Trainer Banner"/>
-<br><br>
+<img src="assets\banner.png" alt="Piper TTS Trainer Banner" width="100%"/>
 
-# 🎙️ Piper TTS Trainer
+# Piper TTS Trainer
 
-**Giao diện đồ họa huấn luyện, xuất và chạy thử giọng nói Piper TTS**<br>
+**Giao diện đồ họa huấn luyện, xuất và chạy thử giọng nói Piper TTS**
 Tối ưu cho tiếng Việt — Phát triển bởi **Văn Khải A.I Studio**
-
-</div>
 
 [![Version](https://img.shields.io/badge/version-3.0-2563eb)](https://github.com/vankhaiaistudio/Piper_TTS_Trainer/releases/latest)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-0078d4?logo=windows)](https://github.com/vankhaiaistudio/Piper_TTS_Trainer/releases/latest)
