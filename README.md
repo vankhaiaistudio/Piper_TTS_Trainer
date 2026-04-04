@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets\banner.png" alt="Piper TTS Trainer Banner" width="100%"/>
+<img src="assets/banner.png" alt="Piper TTS Trainer Banner" width="100%"/>
 
 # Piper TTS Trainer
 
