@@ -1,9 +1,7 @@
 <div align="center">
 
-<img src="assets/banner.png" width="800" alt="Piper TTS Trainer Banner"/>
+<img src="assets/banner.png" width="100%" alt="Piper TTS Trainer Banner"/>
 <br><br>
-
-<img src="assets/thumbnail.png" width="80" alt="Piper TTS Trainer Icon"/>
 
 # 🎙️ Piper TTS Trainer
 
